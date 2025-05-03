@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Dystopia - Main</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -22,27 +23,30 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 2vw;
+      padding: 0 1vw;
       z-index: 1000;
+      flex-wrap: nowrap;
     }
 
     .navbar-left {
       display: flex;
       align-items: center;
       gap: 0.5em;
+      white-space: nowrap;
     }
 
     .navbar-center {
       display: flex;
       justify-content: center;
       flex: 1;
-      gap: 3em;
+      gap: 2em;
+      flex-wrap: wrap;
     }
 
     .navbar-right {
       display: flex;
       align-items: center;
-      gap: 1em;
+      white-space: nowrap;
     }
 
     .navbar a, .wallet-button {
@@ -71,6 +75,13 @@
 
     .content {
       padding: 2em;
+    }
+
+    @media (max-width: 600px) {
+      .navbar a, .wallet-button {
+        font-size: 0.9em;
+        padding: 0.25em 0.8em;
+      }
     }
   </style>
 </head>
