@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dystopia</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #111;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loader {
+      text-align: center;
+    }
+
+    .loader img {
+      width: 200px;
+      height: 200px;
+      animation: spin 5s linear infinite;
+    }
+
+    .title {
+      margin-top: 20px;
+      color: #e0e0e0;
+      font-size: 2em;
+      letter-spacing: 0.15em;
+      font-family: 'Courier New', monospace;
+      text-shadow: 0 0 10px #555, 0 0 20px #333;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <img src="dystopia.png" alt="Dystopia Spinner">
+    <div class="title">DYSTOPIA</div>
+  </div>
+</body>
+</html>
