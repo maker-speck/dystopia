@@ -3,63 +3,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dystopia - Main</title>
+  <title>Dystopia - Cyclops Scroll</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    * { box-sizing: border-box; }
     html, body {
-      margin: 0; padding: 0; height: 100%;
-      font-family: 'Courier New', monospace; color: white;
+      margin: 0;
+      padding: 0;
+      height: 100%;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      overflow-y: auto;
+      font-family: 'Courier New', monospace;
+      color: white;
+      overflow-x: hidden;
     }
 
     .navbar {
-      position: fixed; top: 0; left: 0; height: 7vh; width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 7vh;
+      width: 100%;
       background: rgba(17, 17, 17, 0.85);
-      display: flex; justify-content: space-between;
-      align-items: center; padding: 0 1vw; z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1vw;
+      z-index: 1000;
     }
 
     .navbar-left {
-      display: flex; align-items: center; gap: 0.5em; white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      white-space: nowrap;
     }
 
     .navbar-center {
-      position: absolute; left: 50%; transform: translateX(-50%);
-      display: flex; gap: 2em; flex-wrap: wrap;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 2em;
+      flex-wrap: wrap;
     }
 
     .navbar-right {
-      display: flex; align-items: center; margin-right: 5vw; white-space: nowrap;
+      display: flex;
+      align-items: center;
+      margin-right: 5vw;
+      white-space: nowrap;
     }
 
     .navbar a, .wallet-button {
-      color: white; text-decoration: none; font-size: 1em;
-      background: transparent; border: 1px solid white;
-      padding: 0.3em 1em; border-radius: 4px;
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      background: transparent;
+      border: 1px solid white;
+      padding: 0.3em 1em;
+      border-radius: 4px;
       transition: background 0.3s;
     }
 
     .navbar a:hover, .wallet-button:hover {
-      background: white; color: #111;
+      background: white;
+      color: #111;
     }
 
-    .logo { height: 30px; }
-    .spacer { height: 7vh; }
+    .logo {
+      height: 30px;
+    }
+
+    .spacer {
+      height: 7vh;
+    }
+
+    .scroll-section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .cyclops-link {
+      pointer-events: all;
+    }
+
+    .cyclops-img {
+      width: 300px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .cyclops-img:hover {
+      transform: scale(1.05);
+    }
 
     .content {
       padding: 2em;
       min-height: 200vh;
       background: transparent;
-    }
-
-    @media (max-width: 600px) {
-      .navbar a, .wallet-button {
-        font-size: 0.9em;
-        padding: 0.25em 0.8em;
-      }
     }
   </style>
 </head>
@@ -82,10 +126,16 @@
 
   <div class="spacer"></div>
 
+  <div class="scroll-section">
+    <a href="origin.html" class="cyclops-link">
+      <img src="eye-open.png" alt="Cyclops" class="cyclops-img">
+    </a>
+  </div>
+
   <div class="content">
-    <h1>Main Content Area</h1>
-    <p>This is your original working layout with the checkerboard floor and spinning logo.</p>
-    <p style="margin-top: 1000px;">Scroll test complete.</p>
+    <h1>Keep Scrolling</h1>
+    <p>This section continues below the floating cyclops button.</p>
+    <p style="margin-top: 1200px;">End of content area.</p>
   </div>
 
 </body>
