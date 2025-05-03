@@ -7,11 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * { box-sizing: border-box; }
-    body, html {
-      margin: 0; padding: 0; height: 100%;
-      font-family: 'Courier New', monospace; color: white;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Courier New', monospace;
+      color: white;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
+      overflow-y: auto;
     }
 
     .navbar {
@@ -50,8 +54,15 @@
 
     .content {
       padding: 2em;
-      min-height: 100vh;
+      min-height: 200vh;
       background: transparent;
+    }
+
+    @media (max-width: 600px) {
+      .navbar a, .wallet-button {
+        font-size: 0.9em;
+        padding: 0.25em 0.8em;
+      }
     }
   </style>
 </head>
@@ -76,7 +87,8 @@
 
   <div class="content">
     <h1>Main Content Area</h1>
-    <p>This is a placeholder for scrollable content with the new checkerboard floor and black sky background.</p>
+    <p>This is a scrollable section with fixed background and navbar.</p>
+    <p style="margin-top: 1500px;">Scroll test complete.</p>
   </div>
 
 </body>
