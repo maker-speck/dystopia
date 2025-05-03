@@ -26,13 +26,22 @@
       animation: spin 5s linear infinite;
     }
 
-    .title {
+    .title-button {
       margin-top: 20px;
       color: #e0e0e0;
       font-size: 2em;
       letter-spacing: 0.15em;
       font-family: 'Courier New', monospace;
       text-shadow: 0 0 10px #555, 0 0 20px #333;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .title-button:hover {
+      color: #fff;
+      text-shadow: 0 0 20px #888, 0 0 40px #aaa;
+      transform: scale(1.05);
     }
 
     @keyframes spin {
@@ -44,8 +53,7 @@
 <body>
   <div class="loader">
     <img src="dystopia.png" alt="Dystopia Spinner">
-    
-    <div class="title">DYSTOPIA</div>
+    <a href="main.html" class="title-button">DYSTOPIA</a>
   </div>
 </body>
 </html>
