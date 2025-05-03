@@ -3,70 +3,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cyclops Button</title>
+  <title>Dystopia - Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * { box-sizing: border-box; }
     html, body {
-      margin: 0;
-      padding: 0;
-      height: 200vh;
-      background-color: black;
-      font-family: sans-serif;
+      margin: 0; padding: 0; height: 100%;
+      font-family: 'Courier New', monospace; color: white;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      overflow-y: auto;
     }
 
-    .center-container {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .navbar {
+      position: fixed; top: 0; left: 0; height: 7vh; width: 100%;
+      background: rgba(17, 17, 17, 0.85);
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 0 1vw; z-index: 1000;
     }
 
-    .cyclops-button {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
+    .navbar-left {
+      display: flex; align-items: center; gap: 0.5em; white-space: nowrap;
     }
 
-    .cyclops-button img {
-      width: 300px;
-      transition: opacity 0.3s ease-in-out;
+    .navbar-center {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 2em; flex-wrap: wrap;
     }
 
-    .cyclops-button .open {
-      position: absolute;
-      opacity: 1;
+    .navbar-right {
+      display: flex; align-items: center; margin-right: 5vw; white-space: nowrap;
     }
 
-    .cyclops-button:hover .open {
-      opacity: 0;
+    .navbar a, .wallet-button {
+      color: white; text-decoration: none; font-size: 1em;
+      background: transparent; border: 1px solid white;
+      padding: 0.3em 1em; border-radius: 4px;
+      transition: background 0.3s;
     }
 
-    .cyclops-button:hover .closed {
-      opacity: 1;
+    .navbar a:hover, .wallet-button:hover {
+      background: white; color: #111;
     }
 
-    .cyclops-button .closed {
-      position: absolute;
-      opacity: 0;
+    .logo { height: 30px; }
+    .spacer { height: 7vh; }
+
+    .content {
+      padding: 2em;
+      min-height: 200vh;
+      background: transparent;
     }
 
-    .button-wrapper {
-      position: relative;
-      width: 300px;
-      height: auto;
+    @media (max-width: 600px) {
+      .navbar a, .wallet-button {
+        font-size: 0.9em;
+        padding: 0.25em 0.8em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="center-container">
-    <a href="newpage.html">
-      <div class="cyclops-button button-wrapper">
-        <img src="eye-open.png" alt="Cyclops Open Eye" class="open">
-        <img src="eye-closed.png" alt="Cyclops Closed Eye" class="closed">
-      </div>
-    </a>
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="dystopia.png" alt="Logo" class="logo">
+      <span style="color:white; font-size: 1.1em;">Dystopia</span>
+    </div>
+    <div class="navbar-center">
+      <a href="#">Legacy</a>
+      <a href="#">News Room</a>
+      <a href="#">Library</a>
+    </div>
+    <div class="navbar-right">
+      <button class="wallet-button">Connect Wallet</button>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="content">
+    <h1>Main Content Area</h1>
+    <p>This is your original working layout with the checkerboard floor and spinning logo.</p>
+    <p style="margin-top: 1000px;">Scroll test complete.</p>
   </div>
 
 </body>
