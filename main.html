@@ -8,57 +8,54 @@
   <style>
     * { box-sizing: border-box; }
     body, html {
-      margin: 0; padding: 0; height: 100%; overflow: hidden;
+      margin: 0; padding: 0; height: 100%;
       font-family: 'Courier New', monospace; color: white;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
-    video.bg-video {
-      position: fixed;
-      top: 0; left: 0;
-      min-width: 100%; min-height: 100%;
-      z-index: -1; object-fit: cover;
-    }
+
     .navbar {
       position: fixed; top: 0; left: 0; height: 7vh; width: 100%;
       background: rgba(17, 17, 17, 0.85);
       display: flex; justify-content: space-between;
       align-items: center; padding: 0 1vw; z-index: 1000;
     }
+
     .navbar-left {
       display: flex; align-items: center; gap: 0.5em; white-space: nowrap;
     }
+
     .navbar-center {
       position: absolute; left: 50%; transform: translateX(-50%);
       display: flex; gap: 2em; flex-wrap: wrap;
     }
+
     .navbar-right {
       display: flex; align-items: center; margin-right: 5vw; white-space: nowrap;
     }
+
     .navbar a, .wallet-button {
       color: white; text-decoration: none; font-size: 1em;
       background: transparent; border: 1px solid white;
       padding: 0.3em 1em; border-radius: 4px;
       transition: background 0.3s;
     }
+
     .navbar a:hover, .wallet-button:hover {
       background: white; color: #111;
     }
+
     .logo { height: 30px; }
     .spacer { height: 7vh; }
+
     .content {
-      padding: 2em; height: 100vh;
-      overflow-y: auto; background: transparent;
-    }
-    @media (max-width: 600px) {
-      .navbar a, .wallet-button {
-        font-size: 0.9em; padding: 0.25em 0.8em;
-      }
+      padding: 2em;
+      min-height: 100vh;
+      background: transparent;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop class="bg-video">
-    <source src="background.mp4" type="video/mp4">
-  </video>
 
   <div class="navbar">
     <div class="navbar-left">
@@ -79,8 +76,8 @@
 
   <div class="content">
     <h1>Main Content Area</h1>
-    <p>This is a placeholder for your scrollable page content. The video background loops seamlessly behind the entire layout.</p>
-    <p style="margin-top: 2000px;">Scroll test complete.</p>
+    <p>This is a placeholder for scrollable content with the new checkerboard floor and black sky background.</p>
   </div>
+
 </body>
 </html>
