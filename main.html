@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dystopia - Cyclops Scroll</title>
+  <title>Dystopia - Cyclops Hover</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
@@ -86,18 +86,30 @@
       pointer-events: none;
     }
 
-    .cyclops-link {
+    .cyclops-wrapper {
       pointer-events: all;
+      position: relative;
+      width: 240px;
     }
 
-    .cyclops-img {
-      width: 300px;
-      cursor: pointer;
-      transition: transform 0.3s;
+    .cyclops-wrapper img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.3s ease-in-out;
     }
 
-    .cyclops-img:hover {
-      transform: scale(1.05);
+    .cyclops-wrapper .closed {
+      opacity: 0;
+    }
+
+    .cyclops-wrapper:hover .open {
+      opacity: 0;
+    }
+
+    .cyclops-wrapper:hover .closed {
+      opacity: 1;
     }
 
     .content {
@@ -127,15 +139,16 @@
   <div class="spacer"></div>
 
   <div class="scroll-section">
-    <a href="origin.html" class="cyclops-link">
-      <img src="eye-open.png" alt="Cyclops" class="cyclops-img">
+    <a href="origin.html" class="cyclops-wrapper">
+      <img src="eye-open.png" alt="Open" class="open">
+      <img src="eye-closed.png" alt="Closed" class="closed">
     </a>
   </div>
 
   <div class="content">
     <h1>Keep Scrolling</h1>
-    <p>This section continues below the floating cyclops button.</p>
-    <p style="margin-top: 1200px;">End of content area.</p>
+    <p>This continues after the cyclops button. Add more site content here.</p>
+    <p style="margin-top: 1000px;">End of page area.</p>
   </div>
 
 </body>
