@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dystopia - Final Button</title>
+  <title>Dystopia - Cyclops + Dragon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
@@ -83,16 +83,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 5vw;
       pointer-events: none;
     }
 
-    .cyclops-wrapper {
+    .button-wrapper {
       pointer-events: all;
       position: relative;
-      width: 300px;
+      width: 280px;
     }
 
-    .cyclops-wrapper img {
+    .button-wrapper img {
       width: 100%;
       position: absolute;
       top: 0;
@@ -100,15 +101,15 @@
       transition: opacity 0.3s ease-in-out;
     }
 
-    .cyclops-wrapper .closed {
+    .button-wrapper .alt {
       opacity: 0;
     }
 
-    .cyclops-wrapper:hover .open {
+    .button-wrapper:hover .main {
       opacity: 0;
     }
 
-    .cyclops-wrapper:hover .closed {
+    .button-wrapper:hover .alt {
       opacity: 1;
     }
 
@@ -139,15 +140,20 @@
   <div class="spacer"></div>
 
   <div class="scroll-section">
-    <a href="origin.html" class="cyclops-wrapper">
-      <img src="eye-open.png" alt="Eye Open" class="open">
-      <img src="eye-closed.png" alt="Eye Closed" class="closed">
+    <a href="dragon.html" class="button-wrapper">
+      <img src="dragon-open.png" alt="Dragon Open" class="main">
+      <img src="dragon-closed.png" alt="Dragon Closed" class="alt">
     </a>
+    <a href="origin.html" class="button-wrapper">
+      <img src="eye-open.png" alt="Eye Open" class="main">
+      <img src="eye-closed.png" alt="Eye Closed" class="alt">
+    </a>
+    <div class="button-wrapper"></div>
   </div>
 
   <div class="content">
-    <h1>Explore the Dystopia</h1>
-    <p>Scroll to continue your journey through the site.</p>
+    <h1>Keep Scrolling</h1>
+    <p>This is just the beginning of Dystopia. Add more below.</p>
   </div>
 
 </body>
